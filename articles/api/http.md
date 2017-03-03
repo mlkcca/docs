@@ -9,11 +9,16 @@ HTTP API
 https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo&v={val:10}
 ```
 
+[push test](https://pubsub1.mlkcca.com/api/push/demo/demo?c=topic&v={val:10})
+
+
 ### 最近のデータを取得する
 
 ```
 https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo
 ```
+
+[history test](https://pubsub1.mlkcca.com/api/history/demo/demo?c=topic)
 
 
 ### 過去データを取得する
@@ -22,11 +27,16 @@ https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo
 https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo&ts=1488531400000
 ```
 
+[history test](https://pubsub1.mlkcca.com/api/history/demo/demo?c=topic&ts=1488531400000)
+
+
 ### データストアのリストを取得する
 
 ```
-https://pubsub1.mlkcca.com/api/ds/${appid}/${apikey}?c=demo&ts=1488531400000
+https://pubsub1.mlkcca.com/api/ds/${appid}/${apikey}
 ```
+
+[history test](https://pubsub1.mlkcca.com/api/ds/demo/demo)
 
 
 ## API Key and AccessToken

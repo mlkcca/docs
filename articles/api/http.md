@@ -33,10 +33,10 @@ https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo&ts=148853140000
 ### データストアのリストを取得する
 
 ```
-https://pubsub1.mlkcca.com/api/ds/${appid}/${apikey}
+https://pubsub1.mlkcca.com/api/ds/${appid}/${apikey}?c=/
 ```
 
-[history test](https://pubsub1.mlkcca.com/api/ds/demo/demo)
+[datastore list test](https://pubsub1.mlkcca.com/api/ds/demo/demo?c=/)
 
 
 ## API Key and AccessToken

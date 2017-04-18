@@ -33,13 +33,13 @@ client.on('connect', function(connection) {
 client.connect('wss://pubsub1.mlkcca.com/ws/push/${appid}/${apikey}?c=demo/ws');
 ```
 
-`client.connect` の URI 内のパラメータ `c` が DataStore 名になります。
+`client.connect` の URI 内のパラメータ `c` が DataStore 名になります。上述の例では `demo/ws` というデータストアに購読します。
 
-※ API Key は公開することができないため、ブラウザで利用する場合はアクセストークンを利用します。
+※ API Key は公開することができないため、ブラウザで利用する場合は API Key ではなくアクセストークンを利用します。
 
 ## データの Subscribe（購読）と Push（配信・保存）
 
-以下のコードは、データを Subscribe して、1000ms ごとにデータを Push する例です。
+以下のコードは、`demo/ws` というデータストアを Subscribe して、`demo/ws` に 1000ms ごとにデータを Push する例です。
 
 ```js
 var WebSocketClient = require('websocket').client;

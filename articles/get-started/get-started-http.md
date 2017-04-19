@@ -11,9 +11,9 @@ About ページにはアプリ作成時に自動で生成される API Key が�
 
 以下の URL に HTTP GET をリクエストすることで Push（データの配信・保存） ができます。
 
-<a target="_blank" href="https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/http&v={val:10}">https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/http&v={val:10}</a>
+<a target="_blank" href="https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/http&v={%22val%22:10}">https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/http&v={"val":10}</a>
 
-パラメータ `c` が DataStore 名、パラメータ `v` が配信・保存するデータ（JSON形式）になります。上述の例では `demo/http` というデータストアに、 `{val:10}` というデータを配信・保存します。
+パラメータ `c` が DataStore 名、パラメータ `v` が配信・保存するデータ（JSON形式）になります。上述の例では `demo/http` というデータストアに、 `{"val":10}` というデータを配信・保存します。
 
 試しに上述の URL をブラウザで開いてみてください。`{"err":null}` と表示されれば Push が成功しています。Dashboard の DataStore ページで `demo/http` を選択してデータが保存されているか確認できます。
 

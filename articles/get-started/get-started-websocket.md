@@ -12,9 +12,9 @@ About ページにはアプリ作成時に自動で生成される API Key が�
 Node.js(※) を例にとると、Milkcocoa に接続するコードを以下になります。
 
 ```js
-var WebSocketClient = require('websocket').client;
+const WebSocketClient = require('websocket').client;
 
-var client = new WebSocketClient();
+const client = new WebSocketClient();
 
 client.on('connectFailed', function(error) {
   console.log('Connect Error: ' + error.toString());
@@ -42,9 +42,9 @@ client.connect('wss://pubsub1.mlkcca.com/ws/push/${appid}/${apikey}?c=demo/ws');
 以下のコードは、`demo/ws` というデータストアを Subscribe して、`demo/ws` に 1000ms ごとにデータを Push する例です。
 
 ```js
-var WebSocketClient = require('websocket').client;
+const WebSocketClient = require('websocket').client;
 
-var client = new WebSocketClient();
+const client = new WebSocketClient();
 
 client.on('connectFailed', function(error) {
   console.log('Connect Error: ' + error.toString());
@@ -60,7 +60,7 @@ client.on('connect', function(connection) {
   });
   connection.on('message', function(message) {
     if (message.type === 'utf8') {
-      var received = {
+      let received = {
         timestamp: JSON.parse(message.utf8Data)[0][0],
         id: JSON.parse(message.utf8Data)[0][1],
         payload: JSON.parse(message.utf8Data)[0][2],
@@ -71,7 +71,7 @@ client.on('connect', function(connection) {
 
   function sendNumber() {
     if (connection.connected) {
-      var number = Math.round(Math.random() * 0xFFFFFF);
+      let number = Math.round(Math.random() * 0xFFFFFF);
       connection.sendUTF('ws'+number.toString());
       setTimeout(sendNumber, 1000);
     }

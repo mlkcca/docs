@@ -6,10 +6,10 @@ Node.js で Milkcocoa を使う方法です。ライブラリのインストー�
 
 ## Milkcocoa のインストール
 
-プロジェクトに [milkcocoa](https://www.npmjs.com/package/milkcocoa) をインストールします。
+プロジェクトに [milkcocoa](https://github.com/mlkcca/js) をインストールします。
 
 ```bash
-$ npm install milkcocoa
+$ npm install mlkcca/js
 ```
 
 ## Milkcocoa に接続する
@@ -17,7 +17,7 @@ $ npm install milkcocoa
 `API_KEY` と `app_id` を使って Milkcocoa に接続します。
 
 ```js
-const Milkcocoa = require('milkcocoa');
+const Milkcocoa = require('mlkcca');
 
 const milkcocoa = new Milkcocoa({
   appId: '${appid}',

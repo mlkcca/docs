@@ -15,7 +15,7 @@ About ページにはアプリ作成時に自動で生成される API Key が�
 
 パラメータ `c` が DataStore 名、パラメータ `v` が配信・保存するデータ（JSON形式）になります。上述の例では `demo/http` というデータストアに、 `{"val":10}` というデータを配信・保存します。
 
-試しに上述の URL をブラウザで開いてみてください。`{"err":null}` と表示されれば Push が成功しています。Dashboard の DataStore ページで `demo/http` を選択してデータが保存されているか確認できます。
+試しに上述の URL をブラウザで開いてみてください。`{"err":null,"content":{"id":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","t":1234567890123456}}` のように表示されれば Push が成功しています。Dashboard の DataStore ページで `demo/http` を選択してデータが保存されているか確認できます。
 
 
 ## データを Subscribe（購読）する

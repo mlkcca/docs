@@ -6,13 +6,13 @@ JavaScript(Web) で Milkcocoa を使う方法です。ライブラリのイン�
 
 ## Milkcocoa のインストール
 
-プロジェクトに [milkcocoa](https://github.com/mlkcca/js) をインストールします。
+プロジェクトに [SDK](https://github.com/mlkcca/js) をインストールします。
 
 ```bash
 $ npm install mlkcca/js
 ```
 
-CDNの場合は以下です。
+CDN の場合は以下です。
 
 ```html
 <script src="https://raw.githubusercontent.com/mlkcca/js/master/dist/milkcocoa.1.0.0.min.js"></script>
@@ -40,7 +40,7 @@ Milkcocoa.authWithMilkcocoa({appId: '${appid}'}, function(err, milkcocoa) {
 `DataStore` オブジェクトを利用して、データの Push を行います。
 
 ```js
-milkcocoa.dataStore('demo/js', {datatype: 'json'}).push({'v':2});
+milkcocoa.dataStore('demo/js', {datatype: 'json'}).push({v:2});
 ```
 
 `datatype` オプションでデータの型を指定できます。上記の例では JSON にしています。
@@ -50,13 +50,13 @@ milkcocoa.dataStore('demo/js', {datatype: 'json'}).push({'v':2});
 `on()` を利用することで、Subscribe ができます。
 
 ```js
-let ds = milkcocoa.dataStore('demo/js', {datatype: 'json'});
+var ds = milkcocoa.dataStore('demo/js', {datatype: 'json'});
 
 ds.on('push', function (datum) {
   console.log('Pushed: '+datum.value.v);
 });
 
-ds.push({'v':2});
+ds.push({v:2});
 ```
 
 実行すると、以下のようなログが出力されます。
@@ -70,9 +70,9 @@ Pushed: 2
 
 ```json
 {
-  id: "1e725aca-5613-1342-ae46-cdfe7f0db0a7",
-  timestamp: 1492680909730,
-  value: { v: 2 }
+  "id" : "1e725aca-5613-1342-ae46-cdfe7f0db0a7",
+  "timestamp" : 1492680909730,
+  "value" : { "v" : 2 }
 }
 ```
 
@@ -81,9 +81,9 @@ Pushed: 2
 `history()` を利用して、データの取得ができます。
 
 ```js
-let ds = milkcocoa.dataStore('demo/js', {datatype: 'json'});
+var ds = milkcocoa.dataStore('demo/js', {datatype: 'json'});
 
-ds.history({}, function(err, messages) {
+ds.history({/* options */}, function(err, messages) {
   console.log(err, messages);
 });
 ```

@@ -6,7 +6,7 @@ Node.js で Milkcocoa を使う方法です。ライブラリのインストー�
 
 ## Milkcocoa のインストール
 
-プロジェクトに [milkcocoa](https://github.com/mlkcca/js) をインストールします。
+プロジェクトに [SDK](https://github.com/mlkcca/js) をインストールします。
 
 ```bash
 $ npm install mlkcca/js
@@ -30,7 +30,7 @@ const milkcocoa = new Milkcocoa({
 `DataStore` オブジェクトを利用して、データの Push を行います。
 
 ```js
-milkcocoa.dataStore('demo/nodejs', {datatype: 'json'}).push({'v':2});
+milkcocoa.dataStore('demo/nodejs', {datatype: 'json'}).push({v:2});
 ```
 
 `datatype` オプションでデータの型を指定できます。上記の例では JSON にしています。
@@ -46,7 +46,7 @@ ds.on('push', function (datum) {
   console.log('Pushed: '+datum.value.v);
 });
 
-ds.push({'v':2});
+ds.push({v:2});
 ```
 
 実行すると、以下のようなログが出力されます。
@@ -60,9 +60,9 @@ Pushed: 2
 
 ```json
 {
-  id: "1e725aca-5613-1342-ae46-cdfe7f0db0a7",
-  timestamp: 1492680909730,
-  value: { v: 2 }
+  "id" : "1e725aca-5613-1342-ae46-cdfe7f0db0a7",
+  "timestamp" : 1492680909730,
+  "value" : { "v" : 2 }
 }
 ```
 
@@ -73,7 +73,7 @@ Pushed: 2
 ```js
 let ds = milkcocoa.dataStore('demo/nodejs', {datatype: 'json'});
 
-ds.history({}, function(err, messages) {
+ds.history({/* options */}, function(err, messages) {
   console.log(err, messages);
 });
 ```

@@ -6,16 +6,16 @@ JavaScript(Web) で Milkcocoa を使う方法です。ライブラリのイン�
 
 ## Milkcocoa のインストール
 
-プロジェクトに [milkcocoa](https://www.npmjs.com/package/milkcocoa) をインストールします。
+プロジェクトに [milkcocoa](https://github.com/mlkcca/js) をインストールします。
 
 ```bash
-$ npm install milkcocoa
+$ npm install mlkcca/js
 ```
 
 CDNの場合は以下です。
 
 ```html
-<script src="https://cdn.mlkcca.com/v0.6.0/milkcocoa.js"></script>
+<script src="https://raw.githubusercontent.com/mlkcca/js/master/dist/milkcocoa.1.0.0.min.js"></script>
 ```
 
 ## Milkcocoa に接続する

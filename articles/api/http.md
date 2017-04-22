@@ -11,6 +11,11 @@ https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo&v={val:10}
 
 [push test](https://pubsub1.mlkcca.com/api/push/demo/demo?c=topic&v={val:10})
 
+#### HTTP POST methodを使う
+
+```
+curl -X POST -H 'Content-Type: application/json' -d '{"v":"{\"val\":10}"}' https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo
+```
 
 ### 最近のデータを取得する
 

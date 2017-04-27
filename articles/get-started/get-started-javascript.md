@@ -15,7 +15,7 @@ $ npm install mlkcca/js
 CDN の場合は以下です。
 
 ```html
-<script src="https://raw.githubusercontent.com/mlkcca/js/master/dist/milkcocoa.1.0.0.min.js"></script>
+<script src="http://cdn.mlkcca.com/v3/milkcocoa.1.0.0.min.js"></script>
 ```
 
 ## Milkcocoa に接続する

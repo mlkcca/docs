@@ -26,7 +26,7 @@ CDN の場合は以下です。
 // for browserify, webpack etc...
 // var Milkcocoa = require('milkcocoa');
 
-Milkcocoa.authWithMilkcocoa({appId: '${appid}'}, function(err, milkcocoa) {
+Milkcocoa.authWithMilkcocoa({appId: '{{appid}}'}, function(err, milkcocoa) {
   // Use `milkcocoa` for any methods
 });
 ```

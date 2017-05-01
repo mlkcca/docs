@@ -15,10 +15,10 @@ Node.js(※) を例にとると、Milkcocoa に接続するコードを以下に
 const mqtt = require('mqtt')
 
 const MQTT_URL = 'mqtt://pubsub1.mlkcca.com:1883'
-const TOPIC = '${appid}/demo/mqtt'
+const TOPIC = '{{appid}}/demo/mqtt'
 const options = {
-  username: '${apikey}',
-  password: '${appid}'
+  username: '{{apikey}}',
+  password: '{{appid}}'
 }
 const client  = mqtt.connect(MQTT_URL, options)
 
@@ -37,10 +37,10 @@ client.on('connect', function () {
 const mqtt = require('mqtt')
 
 const MQTT_URL = 'mqtt://pubsub1.mlkcca.com:1883'
-const TOPIC = '${appid}/demo/mqtt'
+const TOPIC = '{{appid}}/demo/mqtt'
 const options = {
-  username: '${apikey}',
-  password: '${appid}'
+  username: '{{apikey}}',
+  password: '{{appid}}'
 }
 const client  = mqtt.connect(MQTT_URL, options)
 

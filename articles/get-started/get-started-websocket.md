@@ -30,7 +30,7 @@ client.on('connect', function(connection) {
   });
 });
 
-client.connect('wss://pubsub1.mlkcca.com/ws/push/${appid}/${apikey}?c=demo/ws');
+client.connect('wss://pubsub1.mlkcca.com/ws/push/{{appid}}/{{apikey}}?c=demo/ws');
 ```
 
 `client.connect` の URI 内のパラメータ `c` が DataStore 名になります。上述の例では `demo/ws` というデータストアに購読します。
@@ -79,5 +79,5 @@ client.on('connect', function(connection) {
   sendNumber();
 });
 
-client.connect('wss://pubsub1.mlkcca.com/ws/push/${appid}/${apikey}?c=demo/ws');
+client.connect('wss://pubsub1.mlkcca.com/ws/push/{{appid}}/{{apikey}}?c=demo/ws');
 ```

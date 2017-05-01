@@ -57,8 +57,8 @@ $ npm start
 
 Node をダブルクリックすると設定画面が出てくるので、鉛筆マークから Milkcocoa の `app_id` と `API_KEY` を入力します。それぞれの情報は以下です。
 
-- `app_id` : ${appid}
-- `API_KEY` : ${apikey}
+- `app_id` : {{appid}}
+- `API_KEY` : {{apikey}}
 
 ![](/img/get-started-node-red-settings.png)
 
@@ -108,7 +108,7 @@ Dashboard の DataStore ページで `demo/node-red` を選択してデータが
 
 ここで `demo/node-red` にデータを Push してみましょう。以下の URL をブラウザで開いて Push します。
 
-<a target="_blank" href="https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/node-red&v=123">https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/node-red&v=123</a>
+<a target="_blank" href="https://pubsub1.mlkcca.com/api/push/{{appid}}/{{apikey}}?c=demo/node-red&v=123">https://pubsub1.mlkcca.com/api/push/{{appid}}/{{apikey}}?c=demo/node-red&v=123</a>
 
 Pushをしたら Node-RED エディタの debug の部分にデータが表示されます。
 

@@ -58,5 +58,5 @@ Collaborator は管理画面の *Access > Collaborator* で設定できます。
 `grant` API を `POST` メソッドで使用することで、アクセストークンのアクセスコントロールができます。
 
 ```bash
-curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["push"]}}' https://pubsub1.mlkcca.com/api/grant/${appid}/${apikey}
+curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["push"]}}' https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
 ```

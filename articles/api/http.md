@@ -6,7 +6,7 @@ HTTP API
 ### push data
 
 ```
-https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo&v={val:10}
+https://pubsub1.mlkcca.com/api/push/{{appid}}/{{apikey}}?c=demo&v={val:10}
 ```
 
 [push test](https://pubsub1.mlkcca.com/api/push/demo/demo?c=topic&v={val:10})
@@ -15,7 +15,7 @@ https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo&v={val:10}
 ### 最近のデータを取得する
 
 ```
-https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo
+https://pubsub1.mlkcca.com/api/history/{{appid}}/{{apikey}}?c=demo
 ```
 
 [history test](https://pubsub1.mlkcca.com/api/history/demo/demo?c=topic)
@@ -24,7 +24,7 @@ https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo
 ### 過去データを取得する
 
 ```
-https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo&ts=1488531400000
+https://pubsub1.mlkcca.com/api/history/{{appid}}/{{apikey}?c=demo&ts=1488531400000
 ```
 
 [history test](https://pubsub1.mlkcca.com/api/history/demo/demo?c=topic&ts=1488531400000)
@@ -33,7 +33,7 @@ https://pubsub1.mlkcca.com/api/history/${appid}/${apikey}?c=demo&ts=148853140000
 ### データストアのリストを取得する
 
 ```
-https://pubsub1.mlkcca.com/api/ds/${appid}/${apikey}?c=/
+https://pubsub1.mlkcca.com/api/ds/{{appid}}/{{apikey}}?c=/
 ```
 
 [datastore list test](https://pubsub1.mlkcca.com/api/ds/demo/demo?c=/)
@@ -44,7 +44,7 @@ https://pubsub1.mlkcca.com/api/ds/${appid}/${apikey}?c=/
 ### Grant
 
 ```
-https://pubsub1.mlkcca.com/api/grant/${appid}/${apikey}?rules=["*":["read"]]
+https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}?rules=["*":["read"]]
 ```
 
 ### Access with access token
@@ -52,7 +52,7 @@ https://pubsub1.mlkcca.com/api/grant/${appid}/${apikey}?rules=["*":["read"]]
 use Authorization header.
 
 ```
-curl -H 'Authorization: bearer ${accessToken}' -X GET https://pubsub1.mlkcca.com/api/history/${appid}?c=demo
+curl -H 'Authorization: bearer {{accessToken}}' -X GET https://pubsub1.mlkcca.com/api/history/{{appid}}?c=demo
 ```
 
 

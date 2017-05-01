@@ -20,8 +20,8 @@ $ npm install mlkcca/js
 const Milkcocoa = require('mlkcca');
 
 const milkcocoa = new Milkcocoa({
-  appId: '${appid}',
-  apiKey: '${apikey}'
+  appId: '{{appid}}',
+  apiKey: '{{apikey}}'
 });
 ```
 

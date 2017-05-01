@@ -22,7 +22,7 @@ API Key は公開することができないため、サーバーや IoT デバ�
 以下が、`push` を発行する場合です。
 
 ```bash
-$ curl https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/http\&v=10
+$ curl https://pubsub1.mlkcca.com/api/push/{{appid}}/{{apikey}}?c=demo/http\&v=10
 ```
 
 ### WebSocket
@@ -32,7 +32,7 @@ $ curl https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo/http\&v=10
 以下が、`push` を発行する場合の URL です。
 
 ```bash
-wss://pubsub1.mlkcca.com/ws/push/${appid}/${apikey}?c=demo/ws
+wss://pubsub1.mlkcca.com/ws/push/{{appid}}/{{apikey}}?c=demo/ws
 ```
 
 ### MQTT
@@ -40,8 +40,8 @@ wss://pubsub1.mlkcca.com/ws/push/${appid}/${apikey}?c=demo/ws
 MQTT の User/Pass 認証の部分に API Key を利用して認証を行います。`Username` に `API Key`（`Password` は `APP ID`）が入ります。
 
 ```bash
-Username: ${apikey}
-Password: ${appid}
+Username: {{apikey}}
+Password: {{appid}}
 ```
 
 ### Node.js
@@ -52,8 +52,8 @@ Milkcocoa に接続する際に、オプションとして API Key を渡しま�
 const Milkcocoa = require('mlkcca');
 
 const milkcocoa = new Milkcocoa({
-  appId: '${appid}',
-  apiKey: '${apikey}'
+  appId: '{{appid}}',
+  apiKey: '{{apikey}}'
 });
 ```
 
@@ -61,8 +61,8 @@ const milkcocoa = new Milkcocoa({
 
 `mlkcca` ノードの設定で、API Key を入力します。
 
-- App ID : ${appid}
-- API Key : ${apikey}
+- App ID : {{appid}}
+- API Key : {{apikey}}
 
 ![](/img/get-started-node-red-settings.png)
 
@@ -90,29 +90,29 @@ Milkcocoa では以下の ID Provider のメソッドを提供しています。
 
 ```js
 // Use Milkcocoa Account
-Milkcocoa.authWithMilkcocoa({appId: '${appid}'}, function(err, milkcocoa) {
+Milkcocoa.authWithMilkcocoa({appId: '{{appid}}'}, function(err, milkcocoa) {
   // Use `milkcocoa` for any methods
 });
 
 // Use Twitter Account
-Milkcocoa.authWithTwitter({appId: '${appid}'}, function(err, milkcocoa) {
+Milkcocoa.authWithTwitter({appId: '{{appid}}'}, function(err, milkcocoa) {
   // Use `milkcocoa` for any methods
 });
 
 // Use Facebook Account
-Milkcocoa.authWithFacebook({appId: '${appid}'}, function(err, milkcocoa) {
+Milkcocoa.authWithFacebook({appId: '{{appid}}'}, function(err, milkcocoa) {
   // Use `milkcocoa` for any methods
 });
 
 // Use Github Account
-Milkcocoa.authWithGithub({appId: '${appid}'}, function(err, milkcocoa) {
+Milkcocoa.authWithGithub({appId: '{{appid}}'}, function(err, milkcocoa) {
   // Use `milkcocoa` for any methods
 });
 ```
 
 実行をすると、ポップアップで Window が開いて それぞれのサービスのアカウントへの認証を求められます。認証が完了したら、第二引数のコールバック関数が呼ばれ、 `milkcocoa` オブジェクトを利用できます。
 
-アクセスコントロールについては、<a href="${accessPath}">アクセスコントロールのドキュメント</a>をご覧ください。
+アクセスコントロールについては、<a href="{{accessPath}}">アクセスコントロールのドキュメント</a>をご覧ください。
 
 
 ### 独自の方法でアクセストークンを発行する場合
@@ -122,7 +122,7 @@ Milkcocoa.authWithGithub({appId: '${appid}'}, function(err, milkcocoa) {
 具体的には、ID Provider の認証情報を受け取るサーバーにて以下の API を発行します。
 
 ```bash
-https://pubsub1.mlkcca.com/api/grant/${appid}/${apikey}
+https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
 ```
 
 こちらの API を発行するとレスポンスとしてアクセストークンを返します。
@@ -144,7 +144,7 @@ https://pubsub1.mlkcca.com/api/grant/${appid}/${apikey}
 `POST` メソッドを使用することで、上記 `rules` や `ttl` といった、トークンのアクセスコントロールができます。
 
 ```bash
-curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["push"]}}' https://pubsub1.mlkcca.com/api/grant/${appid}/${apikey}
+curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["push"]}}' https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
 ```
 
-アクセスコントロールについては、<a href="${accessPath}">アクセスコントロールのドキュメント</a>をご覧ください。
+アクセスコントロールについては、<a href="{{accessPath}}">アクセスコントロールのドキュメント</a>をご覧ください。

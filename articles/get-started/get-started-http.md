@@ -17,11 +17,11 @@ About ページにはアプリ作成時に自動で生成される API Key が�
 
 試しに上述の URL をブラウザで開いてみてください。`{"err":null,"content":{"id":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","t":1234567890123456}}` のように表示されれば Push が成功しています。Dashboard の DataStore ページで `demo/http` を選択してデータが保存されているか確認できます。
 
-### HTTP POST methodを使う
+### HTTP POST method を使う
 
-HTTP POSTでPushをする方法は以下です。curlがインストールされている環境で、試してみてください。
+HTTP POST で Push をする方法は以下です。curl がインストールされている環境で、試してみてください。
 
-```
+```bash
 curl -X POST -H 'Content-Type: application/json' -d '{"v":"{\"val\":10}"}' https://pubsub1.mlkcca.com/api/push/${appid}/${apikey}?c=demo
 ```
 

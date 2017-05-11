@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title" : "grant",
+    "description" : "Creates an access token.",
+    "url" : "#grant"
+  },
+  "method" : "GET/POST",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/api/grant/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "rules",
+          "value" : "array",
+          "description" : "The access rules. You can check the detail at [Access documentation](/guides/access/).",
+          "optional" : false
+        }
+      ],
+      "path" : false
+    },
+    "example" : "```bash\n$ curl -H 'Content-Type:application/json' -d '{\"rules\":{\"demo\":[\"push\"]}}' https://pubsub1.mlkcca.com/api/grant/demo/demo\n```"
+  },
+  "response": {
+    "data" : {
+      "err" : null,
+      "content" : {
+        "access_token" : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "rules" : {
+          "demo": ["push"]
+        },
+        "ttl" : 864000
+      }
+    },
+    "parameters" : [
+      {
+        "name" : "err",
+        "value" : "object / null",
+        "description" : "The error codes."
+      },
+      {
+        "name" : "content.access_token",
+        "value" : "string",
+        "description" : "The access token. You can use this for authentication."
+      },
+      {
+        "name" : "content.rules",
+        "value" : "object",
+        "description" : "The access rules of this access token. You can check the detail at [Access documentation](/guides/access/)."
+      },
+      {
+        "name" : "content.ttl",
+        "value" : "number",
+        "description" : "The time to live of this data."
+      }
+    ]
+  }
+}

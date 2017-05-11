@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title" : "on",
+    "description" : "Listens for data transactions at a particular location.",
+    "url" : "#on"
+  },
+  "method" : "GET",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/on/[event]/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "c",
+          "value" : "array",
+          "description" : "You can subscribe to multiple dataStores using the list of array. The child array contains `path` and `ts` (`[path,ts]`), `path` is the dataStore path and `ts` is the latest timestamp you got data. you need to update `ts` and send another request every time you get data.",
+          "optional" : false
+        }
+      ],
+      "path" : [
+        {
+          "name" : "event",
+          "value" : "push / send / set",
+          "description" : "Listens for data transactions at a particular location. Your callback will be triggered whenever the data transactions.",
+          "optional" : false
+        }
+      ]
+    },
+    "example" : "```bash\n$ curl https://pubsub1.mlkcca.com/on/push/demo/demo?c=[[\"demo1\",0],[\"demo2\",0]]\n```"
+  },
+  "response": {
+    "data" : {
+      "demo1" : [
+        [1234567890123456, "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" , "Hello"]
+      ],
+      "demo2" : [
+        [1234567890123456, "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" , "World"]
+      ]
+    },
+    "parameters" : [
+      {
+        "name" : "key",
+        "value" : "string",
+        "description" : "The dataStore Path."
+      },
+      {
+        "name" : "value",
+        "value" : "array",
+        "description" : "The array contains `ts`, `id`, `v`(`[ts, id, v]`). `ts` is the timestamp, `id` is the unique ID and `v` is the data value."
+      }
+    ]
+  }
+}

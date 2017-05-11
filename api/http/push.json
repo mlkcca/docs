@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title" : "push",
+    "description" : "Writes data to this dataStore location.",
+    "url" : "#push"
+  },
+  "method" : "GET/POST",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/api/push/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "c",
+          "value" : "string",
+          "description" : "The dataStore path. You can use `/` to create nested dataStore.",
+          "optional" : false
+        },
+        {
+          "name" : "v",
+          "value" : "any",
+          "description" : "The value to be written (string, number, boolean, object, array, or null).",
+          "optional" : false
+        }
+      ],
+      "path" : false
+    },
+    "example" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/push/demo/demo?c=demo&v={val:10}\n```"
+  },
+  "response": {
+    "data": {
+      "err" : null,
+      "content" : {
+        "id" : "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+        "t" : 1234567890123456
+      }
+    },
+    "parameters" : [
+      {
+        "name" : "err",
+        "value" : "object / null",
+        "description" : "The error codes."
+      },
+      {
+        "name" : "content.id",
+        "value" : "string",
+        "description" : "The unique ID."
+      },
+      {
+        "name" : "content.t",
+        "value" : "number",
+        "description" : "The timestamp."
+      }
+    ]
+  }
+}

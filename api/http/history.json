@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title" : "history",
+    "description" : "Retrieves data from a dataStore location.",
+    "url" : "#history"
+  },
+  "method" : "GET",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/api/history/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "c",
+          "value" : "array",
+          "description" : "The dataStore path. You can use `/` to create nested dataStore.",
+          "optional" : false
+        }
+      ],
+      "path" : false
+    },
+    "example" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/history/demo/demo?c=demo\n```"
+  },
+  "response": {
+    "data" : {
+      "err" : null,
+      "content" : [
+        {
+          "id" : "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+          "t" : 1234567890123456,
+          "v" : "Hello"
+        },
+        {
+          "id" : "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+          "t" : 1234567890123456,
+          "v" : "World"
+        }
+      ]
+    },
+    "parameters" : [
+      {
+        "name" : "err",
+        "value" : "object",
+        "description" : "The error codes."
+      },
+      {
+        "name" : "content.id",
+        "value" : "string",
+        "description" : "The unique ID."
+      },
+      {
+        "name" : "content.t",
+        "value" : "number",
+        "description" : "The timestamp."
+      },
+      {
+        "name" : "content.v",
+        "value" : "string",
+        "description" : "The value."
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title" : "ds",
+    "description" : "Fetches the list of dataStore paths.",
+    "url" : "#ds"
+  },
+  "method" : "GET",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/api/ds/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "c",
+          "value" : "string",
+          "description" : "The dataStore path. This works as prefix search. You can use `/` to create nested dataStore. If you want to get all paths, use blank.",
+          "optional" : false
+        }
+      ],
+      "path" : false
+    },
+    "example" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/ds/demo/demo?c=\n```"
+  },
+  "response": {
+    "data" : {
+      "err" : null,
+      "content" : [
+        "demo",
+        "demo/http"
+      ]
+    },
+    "parameters" : [
+      {
+        "name" : "err",
+        "value" : "object / null",
+        "description" : "The error codes."
+      },
+      {
+        "name" : "content",
+        "value" : "array",
+        "description" : "The list of dataStore paths."
+      }
+    ]
+  }
+}

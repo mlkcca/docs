@@ -25,7 +25,11 @@
         }
       ]
     },
-    "example" : "```bash\n$ curl https://pubsub1.mlkcca.com/on/push/demo/demo?c=[[\"demo1\",0],[\"demo2\",0]]\n```"
+    "examples" : [
+      {
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/on/push/demo/demo?c=[[\"demo1\",0],[\"demo2\",0]]\n```"
+      }
+    ]
   },
   "response": {
     "data" : {

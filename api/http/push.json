@@ -24,7 +24,11 @@
       ],
       "path" : false
     },
-    "example" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/push/demo/demo?c=demo&v={val:10}\n```"
+    "examples" : [
+      {
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/push/demo/demo?c=demo&v={val:10}\n```"
+      }
+    ]
   },
   "response": {
     "data": {

@@ -18,7 +18,11 @@
       ],
       "path" : false
     },
-    "example" : "```bash\n$ curl -H 'Content-Type:application/json' -d '{\"rules\":{\"demo\":[\"push\"]}}' https://pubsub1.mlkcca.com/api/grant/demo/demo\n```"
+    "examples" : [
+      {
+        "code" : "```bash\n$ curl -H 'Content-Type:application/json' -d '{\"rules\":{\"demo\":[\"push\"]}}' https://pubsub1.mlkcca.com/api/grant/demo/demo\n```"
+      }
+    ]
   },
   "response": {
     "data" : {

@@ -1,0 +1,25 @@
+{
+  "meta" : {
+    "title" : "new Milkcocoa",
+    "description" : "Creates and initializes a Milkcocoa app instance.",
+    "url": "#Milkcocoa",
+    "anchor": "Milkcocoa"
+  },
+  "usage" : "new Milkcocoa(options)",
+  "returns" : {
+    "description" : "The initialized app.",
+    "class" : "milkcocoa",
+    "type" : "non-null"
+  },
+  "parameters" : [
+    {
+      "name" : "options",
+      "value" : "object",
+      "description" : "Options to configure the app's services. Value must not be null.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar milkcocoa = new Milkcocoa({\n  appId: 'XXXXXX', // must not be null \n  apiKey: 'XXXXXX', // if the client auth with API Key\n  accessToken: 'XXXXXX', // if the client auth with access token\n  uuid: 'must_be_unique_client_id'  // optional\n});\n```"}
+  ]
+}

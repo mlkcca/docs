@@ -1,0 +1,26 @@
+{
+  "meta" : {
+    "title" : "on",
+    "description" : "Listens for data transactions at a particular location. Your callback will be triggered whenever the data transactions.",
+    "url": "datastore/#on"
+  },
+  "usage" : "on(event, callback)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "event",
+      "value" : "string",
+      "description" : "One of the following strings: `push`, `send` or `set`.",
+      "optional" : false
+    },
+    {
+      "name" : "callback",
+      "value" : "function(payload)",
+      "description" : "The `payload` is the data from a publisher.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.on('send', function(payload) {\n  console.log(payload);\n});\n```"}
+  ]
+}

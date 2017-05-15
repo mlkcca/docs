@@ -1,0 +1,30 @@
+{
+  "meta" : {
+    "title" : "dataStore",
+    "description" : "Gets the DataStore service for the app. [Learn more about DataStore](/guides/datastore/).",
+    "url": "#dataStore"
+  },
+  "usage" : "milkcocoa.dataStore(path, options)",
+  "returns" : {
+    "description" : "The DataStore object.",
+    "class" : "Milkcocoa.[DataStore](datastore)",
+    "type" : "non-null"
+  },
+  "parameters" : [
+    {
+      "name" : "path",
+      "value" : "string",
+      "description" : "Path representing the location.",
+      "optional" : false
+    },
+    {
+      "name" : "options",
+      "value" : "object",
+      "description" : "Options to configure the dataStore's data type. Value must not be null.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('tokyo/shibuya', { datatype:'json' });\n```"}
+  ]
+}

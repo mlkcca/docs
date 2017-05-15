@@ -1,0 +1,20 @@
+{
+  "meta" : {
+    "title" : "off",
+    "description" : "Detaches a callback previously attached with [`on()`](#on).",
+    "url": "datastore/#off"
+  },
+  "usage" : "off(event)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "event",
+      "value" : "string",
+      "description" : "One of the following strings: `push`, `send` or `set`.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.on('send', function(payload) {\n  console.log(payload);\n});\nds.off('send');\n```"}
+  ]
+}

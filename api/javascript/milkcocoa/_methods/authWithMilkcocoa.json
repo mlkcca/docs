@@ -1,0 +1,28 @@
+{
+  "meta" : {
+    "title" : "Milkcocoa.authWithMilkcocoa",
+    "description" : "Authenticates a Milkcocoa client using a popup-based Milkcocoa authentication flow.",
+    "url": "#authWithMilkcocoa",
+    "onlyJS": true,
+    "anchor": "authWithMilkcocoa"
+  },
+  "usage" : "Milkcocoa.authWithMilkcocoa(options, callback)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "options",
+      "value" : "object",
+      "description" : "Options to configure the app's services. Value must not be null.",
+      "optional" : false
+    },
+    {
+      "name" : "callback",
+      "value" : "function(nullable Error, milkcocoa)",
+      "description" : "After authentication, you can use a `milkcocoa`, the initialized app.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nMilkcocoa.authWithMilkcocoa({ appId:'XXXXXXXX' }, function(err, milkcocoa) {\n  // use any method with ’milkcocoa’ \n});\n```"}
+  ]
+}

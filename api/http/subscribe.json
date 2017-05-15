@@ -1,7 +1,7 @@
 {
   "meta": {
     "title" : "on",
-    "description" : "Listens for data transactions at a particular location.",
+    "description" : "Listens for data transactions at a particular location. Your callback will be triggered whenever the data transactions.",
     "url" : "#on"
   },
   "method" : "GET",
@@ -19,8 +19,8 @@
       "path" : [
         {
           "name" : "event",
-          "value" : "push / send / set",
-          "description" : "Listens for data transactions at a particular location. Your callback will be triggered whenever the data transactions.",
+          "value" : "string",
+          "description" : "One of the following strings: \"push\", \"send\", or \"set.\"",
           "optional" : false
         }
       ]

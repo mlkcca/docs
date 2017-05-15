@@ -1,0 +1,13 @@
+{
+  "meta" : {
+    "title" : "disconnect",
+    "description" : "Disconnect from the app.",
+    "url": "#disconnect"
+  },
+  "usage" : "milkcocoa.disconnect()",
+  "returns" : null,
+  "parameters" : null,
+  "examples" : [
+    {"code" : "```js\nmilkcocoa.disconnect();\n```"}
+  ]
+}

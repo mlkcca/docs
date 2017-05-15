@@ -1,0 +1,27 @@
+{
+  "meta" : {
+    "title" : "grant",
+    "description" : "Creates an access token.",
+    "url": "#grant",
+    "onlyNodeJS": true
+  },
+  "usage" : "milkcocoa.grant(options, callback)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "options",
+      "value" : "object",
+      "description" : "Options to configure the access token rules and TTL. Value must not be null.",
+      "optional" : false
+    },
+    {
+      "name" : "callback",
+      "value" : "function(nullable Error, accessToken)",
+      "description" : "You can use `accessToken` for authentication.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nmilkcocoa.grant({}, function(err, accessToken) {\n  console.log(\n    accessToken.access_token, // the token\n    accessToken.ttl, // the time to live of token\n    accessToken.rules // the access rules of token\n  );\n  var milkcocoa = new Milkcocoa({appId: 'XXXXXX', accessToken: accessToken.access_token}));\n  milkcocoa.connect();\n})\n```"}
+  ]
+}

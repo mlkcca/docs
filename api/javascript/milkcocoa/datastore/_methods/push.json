@@ -1,0 +1,26 @@
+{
+  "meta" : {
+    "title" : "push",
+    "description" : "Writes new data with a unique key.",
+    "url": "datastore/#push"
+  },
+  "usage" : "push(value, onComplete)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "value",
+      "value" : "any type",
+      "description" : "Value to be written at the generated location.",
+      "optional" : false
+    },
+    {
+      "name" : "onComplete",
+      "value" : "function(result)",
+      "description" : "The `result` is data pushed to a DataStore location.",
+      "optional" : true
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.push({message: 'Hello!'}, function(result) {\n  console.log(result);\n});\n```"}
+  ]
+}

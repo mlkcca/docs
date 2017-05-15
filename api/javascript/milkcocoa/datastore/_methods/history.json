@@ -1,0 +1,26 @@
+{
+  "meta" : {
+    "title" : "history",
+    "description" : "Retrieve data from the DataStore.",
+    "url": "datastore/#history"
+  },
+  "usage" : "history(options, callback)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "options",
+      "value" : "object",
+      "description" : "Options to configure the data retrieving. Value must not be null.",
+      "optional" : false
+    },
+    {
+      "name" : "callback",
+      "value" : "function(nullable Error, array data)",
+      "description" : "The `data` is from a DataStore location.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.history({\n  limit: 100, // the max number of data retrieving\n  order: 'desc', // or 'asc'\n  ts: null // the max timestamp of data retrieving\n}, function(err, messages) {\n  console.log(err, messages);\n});\n```"}
+  ]
+}

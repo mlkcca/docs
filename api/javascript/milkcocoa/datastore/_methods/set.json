@@ -1,0 +1,32 @@
+{
+  "meta" : {
+    "title" : "set",
+    "description" : "Writes data to this DataStore location with ID. This will overwrite any data at this location.",
+    "url": "datastore/#set"
+  },
+  "usage" : "set(id, value, onComplete)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "id",
+      "value" : "string",
+      "description" : "The unique ID of data.",
+      "optional" : false
+    },
+    {
+      "name" : "value",
+      "value" : "any type",
+      "description" : "Value to be written at the generated location.",
+      "optional" : false
+    },
+    {
+      "name" : "onComplete",
+      "value" : "function(result)",
+      "description" : "The `result` is data published to a DataStore location.",
+      "optional" : true
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.set('id1', {message: 'Hello!'}, function(result) {\n  console.log(result);\n});\n```"}
+  ]
+}

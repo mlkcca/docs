@@ -2,7 +2,7 @@
 
 MQTT で Milkcocoa を使う方法です。ライブラリのインストールは必要はありません。
 
-なお、 MQTT で Milkcocoa を使う場合、API Key による認証を行います。具体的には Username に API Key を入れることで認証を行います。
+なお、 MQTT で Milkcocoa を使う場合、API Key による認証を行います。具体的には Username に API Key の先頭に `k` を入れた値を使うことで認証を行います。
 
 About ページにはアプリ作成時に自動で生成される API Key が入った 接続情報が記載されています。
 
@@ -17,7 +17,7 @@ const mqtt = require('mqtt')
 const MQTT_URL = 'mqtt://pubsub1.mlkcca.com:1883'
 const TOPIC = '{{appid}}/demo/mqtt'
 const options = {
-  username: '{{apikey}}',
+  username: 'k{{apikey}}',
   password: '{{appid}}'
 }
 const client  = mqtt.connect(MQTT_URL, options)
@@ -39,7 +39,7 @@ const mqtt = require('mqtt')
 const MQTT_URL = 'mqtt://pubsub1.mlkcca.com:1883'
 const TOPIC = '{{appid}}/demo/mqtt'
 const options = {
-  username: '{{apikey}}',
+  username: 'k{{apikey}}',
   password: '{{appid}}'
 }
 const client  = mqtt.connect(MQTT_URL, options)

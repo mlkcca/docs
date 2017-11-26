@@ -144,7 +144,7 @@ https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
 `POST` メソッドを使用することで、上記 `rules` や `ttl` といった、トークンのアクセスコントロールができます。
 
 ```bash
-curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["push"]}}' https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
+curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["write"]}}' https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
 ```
 
 アクセスコントロールについては、<a href="{{accessPath}}">アクセスコントロールのドキュメント</a>をご覧ください。

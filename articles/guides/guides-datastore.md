@@ -79,7 +79,7 @@ DataStore に発行される API は DataStore ごとにアクセスコントロ
 
 ```json
 {
-  "japan/tokyo" : ["push"]
+  "japan/tokyo" : ["write"]
 }
 ```
 
@@ -87,7 +87,7 @@ DataStore に発行される API は DataStore ごとにアクセスコントロ
 
 ```json
 {
-  "usa/west/oregon" : ["send"]
+  "usa/west/oregon" : ["write"]
 }
 ```
 
@@ -95,9 +95,9 @@ DataStore に発行される API は DataStore ごとにアクセスコントロ
 
 ```json
 {
-  "usa/*" : ["on"],
-  "japan/*" : ["history", "on"]
+  "usa/*" : ["read"],
+  "japan/*" : ["read"]
 }
 ```
 
-実案件では、Web からなにかしらの値を操作するために `set` を許可したり、`usa/west` でオレゴンとカリフォルニアのデータを一旦集計する中継役のデバイスを置いて、`on` と `send` を許可したりする場合もあるかと思います。
+実案件では、Web からなにかしらの値を操作するために `usa/*` に `write` を許可したり、`usa/west` でオレゴンとカリフォルニアのデータを一旦集計する中継役のデバイスを置いて、`read` を許可したりする場合もあるかと思います。

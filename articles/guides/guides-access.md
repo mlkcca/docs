@@ -4,14 +4,14 @@ Milkcocoa は「**誰**が**どこ**に**何**をできる」をシンプルに�
 
 - 誰：1つの API Key もしくはアクセストークン
 - どこ：DataStore のパス名
-- 何：メソッド（`push`, `history`など）
+- 何：権限（`write`, `read`, `manage`, `any`）
 
 アクセスコントロールは JSON 形式で記述します。
 
 ```json
 {
-  "DATASTORE_PATH1" : ["method1","method2",...],
-  "DATASTORE_PATH2" : ["method1","method2",...],
+  "DATASTORE_PATH1" : ["permission1","permission2",...],
+  "DATASTORE_PATH2" : ["permission1","permission2",...],
   ...
 }
 ```
@@ -20,8 +20,8 @@ Milkcocoa は「**誰**が**どこ**に**何**をできる」をシンプルに�
 
 ```json
 {
-  "*" : ["history"],
-  "japan/*" : ["push", "set", "send"]
+  "*" : ["read"],
+  "japan/*" : ["write"]
 }
 ```
 
@@ -49,14 +49,11 @@ Collaborator は管理画面の *Access > Collaborator* で設定できます。
 
 ![](/img/guides-access-token-collaborator.png)
 
-### Twitter, Facebook, Github のアカウントを使って認証する場合
-
-（不明）
 
 ### 自分でアクセストークンを発行する場合
 
 `grant` API を `POST` メソッドで使用することで、アクセストークンのアクセスコントロールができます。
 
 ```bash
-curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["push"]}}' https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
+curl -H 'Content-Type:application/json' -d '{"rules":{"demo":["write"]}}' https://pubsub1.mlkcca.com/api/grant/{{appid}}/{{apikey}}
 ```

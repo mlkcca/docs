@@ -20,7 +20,7 @@
     },
     "examples" : [
       {
-        "code" : "```bash\n$ curl -H 'Content-Type:application/json' -d '{\"rules\":{\"demo\":[\"push\"]}}' https://pubsub1.mlkcca.com/api/grant/demo/demo\n```"
+        "code" : "```bash\n$ curl -H 'Content-Type:application/json' -d '{\"rules\":{\"demo\":[\"write\"]}}' https://pubsub1.mlkcca.com/api/grant/demo/demo\n```"
       }
     ]
   },
@@ -30,7 +30,7 @@
       "content" : {
         "access_token" : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "rules" : {
-          "demo": ["push"]
+          "demo": ["write"]
         },
         "ttl" : 864000
       }

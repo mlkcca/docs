@@ -71,41 +71,19 @@ const milkcocoa = new Milkcocoa({
 
 Web や Mobile など、不特定多数が利用する場合の認証方法です。
 
+### Milkcocoa が提供している ID Provider を利用する場合
+
 ID Provider のアカウント情報をもとにアクセストークンを発行し、そのアクセストークンを使って認証を行います。
 
 ![](/img/guides-auth-access-token.svg)
 
-### Milkcocoa が提供している ID Provider を利用する場合
+現在は ID Provider は Milkcocoa のみです。今後、いくつかの著名なサービスでは簡単にアクセストークン認証を行うためのメソッドを用意する予定です。
 
-Milkcocoa はいくつかの著名なサービスでは簡単にアクセストークン認証を行うためのメソッドを用意しています。
-
-Milkcocoa では以下の ID Provider のメソッドを提供しています。
-
-- Milkcocoa
-- Twitter
-- Facebook
-- Github
-
-それぞれ以下のような使い方をします。
+具体的には、以下のような使い方をします。
 
 ```js
 // Use Milkcocoa Account
 Milkcocoa.authWithMilkcocoa({appId: '{{appid}}'}, function(err, milkcocoa) {
-  // Use `milkcocoa` for any methods
-});
-
-// Use Twitter Account
-Milkcocoa.authWithTwitter({appId: '{{appid}}'}, function(err, milkcocoa) {
-  // Use `milkcocoa` for any methods
-});
-
-// Use Facebook Account
-Milkcocoa.authWithFacebook({appId: '{{appid}}'}, function(err, milkcocoa) {
-  // Use `milkcocoa` for any methods
-});
-
-// Use Github Account
-Milkcocoa.authWithGithub({appId: '{{appid}}'}, function(err, milkcocoa) {
   // Use `milkcocoa` for any methods
 });
 ```
@@ -115,7 +93,7 @@ Milkcocoa.authWithGithub({appId: '{{appid}}'}, function(err, milkcocoa) {
 アクセスコントロールについては、<a href="{{accessPath}}">アクセスコントロールのドキュメント</a>をご覧ください。
 
 
-### 独自の方法でアクセストークンを発行する場合
+### 自前でアクセストークンを発行する場合
 
 上記に該当しないサービスや独自のアカウントシステムを利用する場合、API を使ってアクセストークンを発行する必要があります。
 

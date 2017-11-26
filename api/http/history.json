@@ -14,13 +14,19 @@
           "value" : "array",
           "description" : "The dataStore path. You can use `/` to create nested dataStore.",
           "optional" : false
+        },
+        {
+          "name" : "ts",
+          "value" : "number",
+          "description" : "The latest timestamp(ms) of data you will get. If you want to get data before an hour ago, `ts` will be `new Date().getTime() - 60*60*1000`.",
+          "optional" : true
         }
       ],
       "path" : false
     },
     "examples" : [
       {
-        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/history/demo/demo?c=demo\n```"
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/history/demo/demo?c=demo&ts=1234567890123452\n```"
       }
     ]
   },
@@ -30,12 +36,12 @@
       "content" : [
         {
           "id" : "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-          "t" : 1234567890123456,
+          "t" : 1234567890123452,
           "v" : "Hello"
         },
         {
           "id" : "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
-          "t" : 1234567890123456,
+          "t" : 1234567890123451,
           "v" : "World"
         }
       ]

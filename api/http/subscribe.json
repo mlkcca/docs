@@ -12,7 +12,7 @@
         {
           "name" : "c",
           "value" : "array",
-          "description" : "You can subscribe to multiple dataStores using the list of array. The child array contains `path` and `ts` (`[path,ts]`), `path` is the dataStore path and `ts` is the latest timestamp you got data. you need to update `ts` and send another request every time you get data.",
+          "description" : "You can subscribe to multiple dataStores using the list of array. The child array contains `path` and `ts` (`[path,ts]`), `path` is the dataStore path and `ts` is the latest timestamp(ms) you got data. you need to update `ts` and send another request every time you get data.",
           "optional" : false
         }
       ],

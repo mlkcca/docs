@@ -37,7 +37,7 @@ wss://pubsub1.mlkcca.com/ws/push/{{appid}}/{{apikey}}?c=demo/ws
 
 ### MQTT
 
-MQTT の User/Pass 認証の部分に API Key を利用して認証を行います。`Username` に `API Key`（`Password` は `APP ID`）が入ります。
+MQTT の User/Pass 認証の部分に API Key を利用して認証を行います。`Username` に `API Key`（`Password` は `APP ID`）が入ります（先頭に `k` がつくことに注意してください）。
 
 ```bash
 Username: k{{apikey}}

@@ -27,6 +27,6 @@
     }
   ],
   "examples" : [
-    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.set('id1', {message: 'Hello!'}, function(result) {\n  console.log(result);\n});\n```"}
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.set('id1', {message: 'Hello!'}, function(err, result) {\n  console.log(result);\n});\n```"}
   ]
 }

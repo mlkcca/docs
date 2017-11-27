@@ -16,7 +16,7 @@
     {
       "name" : "onComplete",
       "value" : "function(nullable Error, result)",
-      "description" : "The `result` is data pushed to a DataStore location.",
+      "description" : "The callback called when the operation complete. The `result` is data pushed to a DataStore location.",
       "optional" : true
     }
   ],

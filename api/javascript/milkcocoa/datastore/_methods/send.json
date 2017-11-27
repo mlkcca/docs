@@ -15,7 +15,7 @@
     },
     {
       "name" : "onComplete",
-      "value" : "function(result)",
+      "value" : "function(nullable Error, result)",
       "description" : "The `result` is data published to a DataStore location.",
       "optional" : true
     }

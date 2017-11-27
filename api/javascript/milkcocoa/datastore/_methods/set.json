@@ -1,7 +1,7 @@
 {
   "meta" : {
     "title" : "set",
-    "description" : "Writes data to this DataStore location with ID. This will overwrite any data at this location.",
+    "description" : "Writes data to this DataStore location with ID. This will overwrite any data at this location. **Note that set data don't have timestamp.**",
     "url": "datastore/#set"
   },
   "usage" : "set(id, value, onComplete)",

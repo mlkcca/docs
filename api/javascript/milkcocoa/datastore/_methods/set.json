@@ -21,12 +21,12 @@
     },
     {
       "name" : "onComplete",
-      "value" : "function(nullable Error, result)",
-      "description" : "The callback called when the operation complete. The `result` is data published to a DataStore location.",
+      "value" : "function(nullable Error)",
+      "description" : "The callback called when the operation complete.",
       "optional" : true
     }
   ],
   "examples" : [
-    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.set('id1', {message: 'Hello!'}, function(err, result) {\n  console.log(result);\n});\n```"}
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.set('id1', {message: 'Hello!'}, function(err) {\n  console.log(err);\n});\n```"}
   ]
 }

@@ -12,7 +12,7 @@
         {
           "name" : "c",
           "value" : "string",
-          "description" : "The dataStore path. This works as prefix search. You can use `/` to create nested dataStore. If you want to get all paths, use blank.",
+          "description" : "The dataStore path. This works as prefix search. If you want to get all paths, use blank.",
           "optional" : false
         }
       ],

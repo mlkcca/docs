@@ -1,0 +1,26 @@
+{
+  "meta" : {
+    "title" : "listDataStores",
+    "description" : "Fetches the list of DataStore paths.",
+    "url": "#listDataStores"
+  },
+  "usage" : "milkcocoa.listDataStores(options, callback)",
+  "returns" : null,
+  "parameters" : [
+    {
+      "name" : "options",
+      "value" : "object",
+      "description" : "Options to configure the filter and the max number. `c` is the dataStore path. This works as prefix search. `limit` is the max number of dataStores. Value must not be null.",
+      "optional" : false
+    },
+    {
+      "name" : "callback",
+      "value" : "function(nullable Error, dataStores)",
+      "description" : "The callback has the list of dataStore paths.",
+      "optional" : false
+    }
+  ],
+  "examples" : [
+    {"code" : "```js\nmilkcocoa.listDataStores({c: 'hoge', limit: 5}, function(err, dataStores) {\n  console.log(dataStores.length === 5);\n  dataStores.forEach(function(ds) {\n    console.log(ds.match(/^hoge/));\n  });\n});\n```"}
+  ]
+}

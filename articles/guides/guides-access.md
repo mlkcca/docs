@@ -38,7 +38,7 @@ Milkcocoa は「**誰**が**どこ**に**何**をできる」をシンプルに�
 
 管理画面の *Access > API Key* で設定します。
 
-![](/img/guides-access-api-key.png)
+![](https://i.gyazo.com/a3ccedd0117bc7c0e0647e7a38e6854a.png)
 
 API Key を作成して、Rule にアクセスできる DataStore とメソッドを JSON 形式で記述します。
 

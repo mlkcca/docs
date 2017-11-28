@@ -33,8 +33,6 @@ const milkcocoa = new Milkcocoa({
 milkcocoa.dataStore('demo/nodejs').push({v:2});
 ```
 
-`datatype` オプションでデータの型を指定できます。上記の例では JSON にしています。
-
 ## データを Subscribe（購読）する
 
 `on()` を利用することで、Subscribe ができます。

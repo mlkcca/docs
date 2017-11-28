@@ -20,6 +20,18 @@
           "value" : "number",
           "description" : "The latest timestamp(ms) of data you will get. If you want to get data before an hour ago, `ts` will be `new Date().getTime() - 60*60*1000`.",
           "optional" : true
+        },
+        {
+          "name" : "limit",
+          "value" : "number",
+          "description" : "The max number of data retrieving.",
+          "optional" : true
+        },
+        {
+          "name" : "order",
+          "value" : "string",
+          "description" : "The sort type, `desc` from later data or `asc` from older data.",
+          "optional" : true
         }
       ],
       "path" : false

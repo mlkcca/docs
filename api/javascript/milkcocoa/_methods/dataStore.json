@@ -20,7 +20,7 @@
     {
       "name" : "options",
       "value" : "object",
-      "description" : "Options to configure the dataStore's data type. Value must not be null.",
+      "description" : "Options to configure the dataStore's data type(`json` or `text`). If the dataStore will receive data from JS SDK, use `json` in any situations. You will use `text` when the dataStore receive data from like embed devices. Value must not be null.",
       "optional" : false
     }
   ],

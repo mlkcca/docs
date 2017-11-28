@@ -16,15 +16,9 @@
       "value" : "string",
       "description" : "Path representing the location.",
       "optional" : false
-    },
-    {
-      "name" : "options",
-      "value" : "object",
-      "description" : "Options to configure the dataStore's data type(`json` or `text`). If the dataStore will receive data from JS SDK, use `json` in any situations. You will use `text` when the dataStore receive data from like embed devices. Value must not be null.",
-      "optional" : false
     }
   ],
   "examples" : [
-    {"code" : "```js\nvar ds = milkcocoa.dataStore('tokyo/shibuya', { datatype:'json' });\n```"}
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('tokyo/shibuya');\n```"}
   ]
 }

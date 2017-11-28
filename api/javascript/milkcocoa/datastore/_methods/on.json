@@ -21,6 +21,6 @@
     }
   ],
   "examples" : [
-    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic', {datatype: 'json'});\nds.on('send', function(payload) {\n  console.log(payload);\n});\n```"}
+    {"code" : "```js\nvar ds = milkcocoa.dataStore('topic');\nds.on('send', function(payload) {\n  console.log(payload);\n});\n```"}
   ]
 }

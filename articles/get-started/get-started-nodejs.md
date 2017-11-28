@@ -30,7 +30,7 @@ const milkcocoa = new Milkcocoa({
 `DataStore` オブジェクトを利用して、データの Push を行います。
 
 ```js
-milkcocoa.dataStore('demo/nodejs', {datatype: 'json'}).push({v:2});
+milkcocoa.dataStore('demo/nodejs').push({v:2});
 ```
 
 `datatype` オプションでデータの型を指定できます。上記の例では JSON にしています。
@@ -40,7 +40,7 @@ milkcocoa.dataStore('demo/nodejs', {datatype: 'json'}).push({v:2});
 `on()` を利用することで、Subscribe ができます。
 
 ```js
-let ds = milkcocoa.dataStore('demo/nodejs', {datatype: 'json'});
+let ds = milkcocoa.dataStore('demo/nodejs');
 
 ds.on('push', function (datum) {
   console.log('Pushed: '+datum.value.v);
@@ -71,7 +71,7 @@ Pushed: 2
 `history()` を利用して、データの取得ができます。
 
 ```js
-let ds = milkcocoa.dataStore('demo/nodejs', {datatype: 'json'});
+let ds = milkcocoa.dataStore('demo/nodejs');
 
 ds.history({/* options */}, function(err, messages) {
   console.log(err, messages);

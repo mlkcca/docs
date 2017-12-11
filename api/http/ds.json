@@ -12,15 +12,15 @@
         {
           "name" : "c",
           "value" : "string",
-          "description" : "The dataStore path. This works as prefix search. If you want to get all paths, use blank.",
-          "optional" : false
+          "description" : "The dataStore path. This works as prefix search. If you want to get all paths, use without `c`.",
+          "optional" : true
         }
       ],
       "path" : false
     },
     "examples" : [
       {
-        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/ds/demo/demo?c=\n```"
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/ds/demo/demo?c=demo\n```"
       }
     ]
   },
@@ -29,6 +29,7 @@
       "err" : null,
       "content" : [
         "demo",
+        "demohoge",
         "demo/http"
       ]
     },

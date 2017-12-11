@@ -35,9 +35,6 @@
     "data" : {
       "demo1" : [
         [1234567890123456, "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" , "Hello"]
-      ],
-      "demo2" : [
-        [1234567890123456, "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" , "World"]
       ]
     },
     "parameters" : [

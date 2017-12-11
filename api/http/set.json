@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title" : "set",
+    "description" : "Writes data to this DataStore location with ID. This will overwrite any data at this location. **Note that set data don't have timestamp.**",
+    "url" : "#set"
+  },
+  "method" : "GET/POST",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/api/set/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "id",
+          "value" : "string",
+          "description" : "The unique ID of data.",
+          "optional" : false
+        },
+        {
+          "name" : "c",
+          "value" : "string",
+          "description" : "The dataStore path. You can use `/` to create nested dataStore.",
+          "optional" : false
+        },
+        {
+          "name" : "v",
+          "value" : "any",
+          "description" : "The value to be written (string, number, boolean, object, array, or null).",
+          "optional" : false
+        }
+      ],
+      "path" : false
+    },
+    "examples" : [
+      {
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/set/demo/demo?id=demo&c=demo&v={val:10}\n```"
+      }
+    ]
+  },
+  "response": {
+    "data": {
+      "err" : null,
+      "content" : {
+        "id" : "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+      }
+    },
+    "parameters" : [
+      {
+        "name" : "err",
+        "value" : "object / null",
+        "description" : "The error codes."
+      },
+      {
+        "name" : "content.id",
+        "value" : "string",
+        "description" : "The unique ID."
+      }
+    ]
+  }
+}

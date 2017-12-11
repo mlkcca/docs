@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title" : "send",
+    "description" : "Publish a new message without writing to a DataStore loaction.",
+    "url" : "#send"
+  },
+  "method" : "GET/POST",
+  "endpoint" : {
+    "url" : "https://pubsub1.mlkcca.com/api/send/[app_id]/[api_key]",
+    "parameters" : {
+      "query" : [
+        {
+          "name" : "c",
+          "value" : "string",
+          "description" : "The dataStore path. You can use `/` to create nested dataStore.",
+          "optional" : false
+        },
+        {
+          "name" : "v",
+          "value" : "any",
+          "description" : "The value to be written (string, number, boolean, object, array, or null).",
+          "optional" : false
+        }
+      ],
+      "path" : false
+    },
+    "examples" : [
+      {
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/send/demo/demo?c=demo&v={val:10}\n```"
+      }
+    ]
+  },
+  "response": {
+    "data": {
+      "err" : null,
+      "content" : {
+        "t" : 1234567890123456
+      }
+    },
+    "parameters" : [
+      {
+        "name" : "err",
+        "value" : "object / null",
+        "description" : "The error codes."
+      },
+      {
+        "name" : "content.t",
+        "value" : "number",
+        "description" : "The timestamp."
+      }
+    ]
+  }
+}

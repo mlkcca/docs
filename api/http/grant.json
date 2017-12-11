@@ -11,16 +11,22 @@
       "query" : [
         {
           "name" : "rules",
-          "value" : "array",
+          "value" : "object",
           "description" : "The access rules. You can check the detail at [Access documentation](/guides/access/).",
-          "optional" : false
+          "optional" : true
+        },
+        {
+          "name" : "ttl",
+          "value" : "number",
+          "description" : "The time to live of this data.",
+          "optional" : true
         }
       ],
       "path" : false
     },
     "examples" : [
       {
-        "code" : "```bash\n$ curl -H 'Content-Type:application/json' -d '{\"rules\":{\"demo\":[\"write\"]}}' https://pubsub1.mlkcca.com/api/grant/demo/demo\n```"
+        "code" : "```bash\n$ curl https://pubsub1.mlkcca.com/api/grant/demo/demo?rules={\"demo\":[\"write\"],\"hoge\":[\"read\"]}&ttl=5000\n```"
       }
     ]
   },
@@ -30,9 +36,10 @@
       "content" : {
         "access_token" : "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
         "rules" : {
-          "demo": ["write"]
+          "demo": ["write"],
+          "hoge": ["read"]
         },
-        "ttl" : 864000
+        "ttl" : 5000
       }
     },
     "parameters" : [

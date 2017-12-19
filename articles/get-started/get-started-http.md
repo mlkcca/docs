@@ -84,7 +84,7 @@ subscribe();
 
 以下の URL に HTTP GET をリクエストすることでデータストアのリストを取得できます。
 
-<a target="_blank" href="https://pubsub1.mlkcca.com/api/ds/{{appid}}/{{apikey}}?c=">https://pubsub1.mlkcca.com/api/ds/{{appid}}/{{apikey}}?c=</a>
+<a target="_blank" href="https://pubsub1.mlkcca.com/api/ds/{{appid}}/{{apikey}}">https://pubsub1.mlkcca.com/api/ds/{{appid}}/{{apikey}}</a>
 
 パラメータ `c` にはデータストア名を入れて、前方一致でフィルターをかけることができます。以下の URL では `demo/` 以下のデータストアのリストを取得できます。
 

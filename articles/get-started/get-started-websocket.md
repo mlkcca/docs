@@ -81,3 +81,5 @@ client.on('connect', function(connection) {
 
 client.connect('wss://pubsub1.mlkcca.com/ws/push/{{appid}}/{{apikey}}?c=demo/ws');
 ```
+
+send API を使いたい場合は、 URL の `push` の部分を `send` に変えます。
